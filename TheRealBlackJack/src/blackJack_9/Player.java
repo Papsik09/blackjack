@@ -7,5 +7,11 @@ public class Player {
 	public Player(String name) {
 		this.name = name; // somehow create input of name?
 	}
+	
+	public void hit()
+	
+	public void stand{
+	
+	public void reset()
 	//TODO: buttons for hit,stand,reset. also dui for score???
 }

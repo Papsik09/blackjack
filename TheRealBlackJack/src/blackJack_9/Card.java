@@ -14,4 +14,7 @@ public class Card {
         this.value = value;
         
     }
+     public getValue() {
+    	 return value;
+     }
 }

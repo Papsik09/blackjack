@@ -14,4 +14,14 @@ public class Deck {
     // TODO: Create loops to adjust values for ranks.
     //First loop will be suits, then ranks. It will give each rank a  suit. Add math value to ranks.
     // Also should be a logic dealCard(), which also will delete card from list.
+    for (String suit : suits) {
+    	for(String rank : ranks) { // Nested loop creates 52 cards
+    		int value = Math.min(10, Arrays.asList(ranks).indexOf(rank) + 2); // chat gpt???
+    		//Put here a numerical value for cards 2=2,3=3..., J=10,Q=10...,
+    		
+    	}
+    }
+ public Card dealCard() {
+	 return cards.remove(0);
+ }
 }
