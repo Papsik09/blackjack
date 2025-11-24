@@ -8,10 +8,35 @@ public class Player {
 		this.name = name; // somehow create input of name?
 	}
 	
-	public void hit()
 	
-	public void stand{
 	
-	public void reset()
+	
+	
+	
+	
+	
+	
+	
+	//------------------------------------
+    public int getScore() { 
+    	return hand.getTotalValue(); 
+    }
+    
+	public void hit(Deck deck) {
+		hand.addCard(deck.dealCard());
+	}
+	
+	public void stand(){
+		
+	}
+	
+	public void reset() {
+		hand.clear();
+	}
+	
+	public java.util.List<Card> getHand() {
+	    return hand.getCards();
+	}
+
 	//TODO: buttons for hit,stand,reset. also dui for score???
 }

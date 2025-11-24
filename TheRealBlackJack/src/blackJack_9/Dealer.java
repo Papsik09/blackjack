@@ -2,5 +2,16 @@ package blackJack_9;
 import java.util.*;
 
 public class Dealer extends Player {
-	// TODO: get cards until 17, bigger then player, tie or < 21.
+    private Deck deck;
+
+    public Dealer(Deck deck) {
+        super("Dealer");
+        this.deck = deck;
+    }
+
+    public void autoPlay(Player player) {
+        while (getScore() < 17 && getScore() < player.getScore()) {
+            hit(deck);
+        }
+    }
 }

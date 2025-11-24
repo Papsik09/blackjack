@@ -6,19 +6,23 @@ public class Hand {
 	private ArrayList<Card> cards = new ArrayList<>();
 	
 	public int getTotalValue() {
-		int score;
-		
-		//Get card and add to score
-		for (Card card : cards) {
-			score = score + getValue(c)
-			return total
-		}
+	    int score = 0;
+	    for (Card card : cards) {
+	        score += card.getValue();
+	    }
+	    return score;
 	}
-
     public void addCard(Card card) { 
     	cards.add(card); 
     	}
-    
+    public void clear() {
+    	cards.clear();
+    }
+    //------------------------
+    public java.util.List<Card> getCards() {
+        return cards;
+    }
+
     
    
 }

@@ -14,7 +14,23 @@ public class Card {
         this.value = value;
         
     }
-     public getValue() {
+     
+     public int getValue() {
     	 return value;
      }
+     
+     
+  // In Card.java -------------------------------------
+     public String shortName() {
+         String sym;
+         switch (suit) {
+             case "Hearts": sym = "♥"; break;
+             case "Diamonds": sym = "♦"; break;
+             case "Clubs": sym = "♣"; break;
+             case "Spades": sym = "♠"; break;
+             default: sym = suit;
+         }
+         return rank + sym;
+     }
+
 }

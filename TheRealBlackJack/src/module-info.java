@@ -4,5 +4,7 @@
 /**
  * 
  */
-module dgbgfbf {
+module blackJack_9 {
+    requires java.desktop;
+
 }
