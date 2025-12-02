@@ -1,4 +1,6 @@
 package blackJack_9;
+import java.util.List;
+
 
 public class Game {
 
@@ -7,10 +9,12 @@ public class Game {
 	    private Dealer dealer = new Dealer(deck);
 	    
 	    public void startGame() {
+	    	deck.shuffle();
 	    	player.reset();
 	    	dealer.reset();
 	    	
-	    	//take cards
+	    	
+	    	//take 2 cards
 	        for (int i = 0; i < 2; i++) {
 	            player.hit(deck);
 	            dealer.hit(deck);
@@ -18,7 +22,22 @@ public class Game {
 	    	//Input name of player? Clean hands. Deal cards?
 	    }
 }
+	    
 	    //-----------------------------------------------------------
+	    public boolean isBlackJack(List<Card>hand) {
+	        boolean hasAce = false;
+	        boolean hasTenValue = false;
+	        
+	    	for (Card c : hand) {
+	    		if (c.getValue() == 11) 
+	    			hasAce = true;
+	    		if (c.getValue() == 10)
+	    			hasTenValue = true;
+	    		
+	    	}
+	    	return hasAce && hasTenValue;
+	    }
+	    //------------------------------------------------------------
 	    public String checkWinner() {
 	        int p = player.getScore(), d = dealer.getScore();
 	        	if (p > 21) {

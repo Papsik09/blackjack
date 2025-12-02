@@ -19,12 +19,24 @@ public class GameGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 400);
         setLayout(new BorderLayout());
+        
+        getContentPane().setBackground(new Color(0, 128, 0));
 
+        
         display.setEditable(false);
         display.setFont(new Font("Monospaced", Font.PLAIN, 14));
-        add(new JScrollPane(display), BorderLayout.CENTER);
+        
+        display.setOpaque(false);
+        display.setForeground(Color.WHITE);
+        
+        JScrollPane scroll = new JScrollPane(display);
+        scroll.getViewport().setBackground(new Color(0, 60, 0));
+        scroll.setBackground(new Color(0, 60, 0));
+        add(scroll, BorderLayout.CENTER);
 
+        //bUTTON PANELS
         JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(new Color(0, 128, 0));
         buttonPanel.add(startBtn);
         buttonPanel.add(hitBtn);
         buttonPanel.add(standBtn);

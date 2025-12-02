@@ -29,10 +29,15 @@ public class Deck {
 	    		
 	    	}
 	    }
+	    shuffle();
     }
     
-
+//Shuffle deck
+public void shuffle() { 
+	Collections.shuffle(cards); 
+	}
+//Deal card
  public Card dealCard() {
 	 return cards.remove(0);
- }
+ 	}
 }
