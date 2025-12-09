@@ -32,5 +32,12 @@ public class Card {
          }
          return rank + sym;
      }
-
+    //----------------------------------------------------
+/**
+ * 
+ * @return Image for cards
+ */
+     public String getImageName() {
+    	    return rank + suit.charAt(0) + ".png";  
+    	}
 }
